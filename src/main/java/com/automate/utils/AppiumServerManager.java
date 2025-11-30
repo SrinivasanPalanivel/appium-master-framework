@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.time.Duration;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class AppiumServerManager {
@@ -35,13 +36,14 @@ public final class AppiumServerManager {
         //Build the Appium service
         AppiumServiceBuilder builder = new AppiumServiceBuilder();
         builder.usingDriverExecutable(new File(FrameworkConstants.NODEJS_PATH))
-          //.withAppiumJS(new File(FrameworkConstants.APPIUM_JS_PATH))
-          .withAppiumJS(new File("C:\\nvm4w\\nodejs\\node_modules\\appium\\build\\lib\\main.js"))
+          .withAppiumJS(new File(FrameworkConstants.APPIUM_JS_PATH))
           .withIPAddress(FrameworkConstants.APPIUM_SERVER_HOST)
           .usingPort(FrameworkConstants.APPIUM_SERVER_PORT)
+          .withTimeout(Duration.ofSeconds(FrameworkConstants.APPIUM_SERVER_STARTUP_TIMEOUT))
           .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
           .withArgument(GeneralServerFlag.ALLOW_INSECURE, "*chromedriver:chromedriver_autodownload")
           .withLogFile(new File(FrameworkConstants.getAppiumServerLogsPath()));
+
         //Start the server with the builder
         service = AppiumDriverLocalService.buildService(builder);
 //				service = AppiumDriverLocalService.buildDefaultService();

@@ -27,7 +27,8 @@ public final class FrameworkConstants {
     TEST_RESOURCES_DIR + File.separator + "data" + File.separator + "testdata.xlsx";
   public static final String APPIUM_SERVER_HOST = "127.0.0.1";
   public static final int APPIUM_SERVER_PORT = 4723;
-  public static final String APPIUM_JS_PATH = System.getenv("APPIUM_HOME") + File.separator + "main.js";
+  public static final int APPIUM_SERVER_STARTUP_TIMEOUT = 120;
+  public static final String APPIUM_JS_PATH = "C:\\nvm4w\\nodejs\\node_modules\\appium\\build\\lib\\main.js";
   public static final String CREDENTIALS_JSON = "data/credentials.json";
   public static final long EXPLICIT_WAIT = 15;
   public static final String TEST_DATA_SHEET = "TEST_DATA";
