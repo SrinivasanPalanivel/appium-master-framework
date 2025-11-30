@@ -11,7 +11,7 @@ Note: Appium v3 changes how the server is packaged; programmatic server startup 
 
 ## :rocket: Quick Start - Appium set up on Windows (Android):
 
-1) Install [Java JDK8](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
+1) Install [Java JDK11](https://www.oracle.com/java/technologies/downloads/#license-lightbox)
    and [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
 2) Install [NodeJS](https://nodejs.org/en/download/)
 3) Install [Android studio](https://developer.android.com/studio)
@@ -33,8 +33,7 @@ Command to check the installed appium version: `appium --version`
     - %ANDROID_HOME%\platform-tools
 ```
 
-6) Install [Appium desktop](https://github.com/appium/appium-desktop/releases/)
-7) Install [Appium Inspector](https://github.com/appium/appium-inspector/releases)
+6) Install [Appium Inspector](https://github.com/appium/appium-inspector/releases)
 
 ## :rocket: Quick Start - Appium set up on MAC (Android):
 
